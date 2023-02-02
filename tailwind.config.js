@@ -13,7 +13,21 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["var(--font-merriweather)", ...fontFamily.sans],
+				serif: ["var(--font-merriweather)", ...fontFamily.sans],
+				sans: "'Inter', sans-serif",
+			},
+			backgroundColor: {
+				bgYellow: "#EBEAE0",
+				yellowPastel: "#FFD166",
+				redPastel: "#EF476F",
+				greenPastel: "#06D6A0",
+				bluePastel: "#118AB2",
+			},
+			minWidth: {
+				mobileWidth: `min(100%, 300px)`,
+			},
+			minHeight: {
+				mobileHeight: `min(100%,300px)`,
 			},
 		},
 	},
