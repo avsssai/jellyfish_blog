@@ -7,7 +7,6 @@ import { format, parseISO } from "date-fns";
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Blog({ posts }: { posts: any }) {
-	console.log(posts);
 	const dateCreated = format(parseISO(posts[0].created_time), "LLLL do, y");
 	return (
 		<BlogLayout>

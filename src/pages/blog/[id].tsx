@@ -1,5 +1,4 @@
 import BlogLayout from "@/components/BlogLayout";
-import Layout from "@/components/Layout";
 import { renderBlock } from "@/components/Temp/Temp";
 import { getBlocks, getDatabase, getPage } from "@/lib/notion";
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -8,16 +7,14 @@ import { Fragment } from "react";
 const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Post({ page, blocks }: { page: any; blocks: any }) {
-	console.log(page, blocks);
-
 	return (
 		<BlogLayout>
 			<h1 className='text-5xl mb-8 font-black text-amber-500 mt-[108px]'>
-				{page.properties.Name.title[0].text.content}
+				{page?.properties?.Name?.title[0]?.text?.content}
 			</h1>
 			<section>
-				{blocks.map((block: any) => (
-					<Fragment key={block.id}>{renderBlock(block)}</Fragment>
+				{blocks?.map((block: any) => (
+					<Fragment key={block?.id}>{renderBlock(block)}</Fragment>
 				))}
 			</section>
 		</BlogLayout>

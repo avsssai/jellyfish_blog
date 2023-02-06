@@ -14,7 +14,6 @@ export const renderBlock = (block: any) => {
 	const value = block[type];
 
 	// const text = value[type]
-	console.log(value);
 	let richTextArr = value.rich_text as RichTextEntity[];
 	switch (type) {
 		case "paragraph":
