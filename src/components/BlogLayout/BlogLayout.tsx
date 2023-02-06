@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function BlogLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<main className='h-full min-h-screen bg-bgYellow w-full'>
 			<div className='header flex justify-center items-center mb-10 lg:w-[400px] m-auto'>
@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 					</Link>
 				</nav>
 			</div>
-			<div className='relative max-w-[1200px] mx-auto'>{children}</div>
+			<div className='relative max-w-[600px] mx-auto'>{children}</div>
 		</main>
 	);
 }
