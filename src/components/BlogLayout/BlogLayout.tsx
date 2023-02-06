@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<main className='h-full min-h-screen bg-bgYellow w-full'>
+		<main className='h-full min-h-screen bg-bgYellow w-full min-w-full px-4' style={{ border: "1px solid red" }}>
 			<div className='header flex justify-center items-center mb-10 lg:w-[400px] m-auto'>
 				<nav className='header-content flex justify-between items-center w-full m-4'>
 					<Link href={"/"}>
@@ -20,7 +20,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
 					</Link>
 				</nav>
 			</div>
-			<div className='relative max-w-[600px] mx-auto'>{children}</div>
+			<div className='relative max-w-[600px] w-[100%] mx-auto'>{children}</div>
 		</main>
 	);
 }

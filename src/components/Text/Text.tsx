@@ -15,7 +15,9 @@ export default function Text({ rich_text }: { rich_text: RichTextEntity }) {
 				italic ? "italic" : ""
 			} ${strikethrough ? "line-through" : ""} ${underline ? "underline" : ""}`}>
 			{text.link ? (
-				<a href={text.link.url} className='text-blue-600 visited:text-purple-600 underline hover:no-underline'>
+				<a
+					href={text.link.url}
+					className='text-blue-600 visited:text-purple-600 underline hover:no-underline break-all'>
 					{href}
 				</a>
 			) : (
