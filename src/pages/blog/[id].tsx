@@ -2,17 +2,16 @@ import BlogLayout from "@/components/BlogLayout";
 import Layout from "@/components/Layout";
 import { renderBlock } from "@/components/Temp/Temp";
 import { getBlocks, getDatabase, getPage } from "@/lib/notion";
+import { format, parseISO } from "date-fns";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { ArrowLeft } from "react-feather";
-import { dateCreated } from ".";
 
 const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Post({ page, blocks }: { page: any; blocks: any }) {
-	console.log(page);
 	return (
 		<Layout background='white'>
 			<div className='max-w-4xl flex flex-col mx-auto p-4 font-sans'>
@@ -36,7 +35,9 @@ export default function Post({ page, blocks }: { page: any; blocks: any }) {
 				<h1 className='text-[100px] sm:text-[150px]  tracking-[-0.10em] leading-[0.7] font-black font-messina mb-4  text-bgRed/50'>
 					{page?.properties?.Name?.title[0]?.text?.content}
 				</h1>
-				<div className='text-gray-500 font-bold text-xl mb-24 md:mb-48 '>{dateCreated(page)}</div>
+				<div className='text-gray-500 font-bold text-xl mb-24 md:mb-48 '>
+					{format(parseISO(page?.created_time), "LLLL do, y")}
+				</div>
 				<section>
 					{blocks?.map((block: any) => (
 						<Fragment key={block?.id}>{renderBlock(block)}</Fragment>

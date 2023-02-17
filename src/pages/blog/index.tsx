@@ -7,7 +7,6 @@ import { format, parseISO } from "date-fns";
 import Page from "@/components/Page";
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
-export const dateCreated = (post: any) => format(parseISO(post?.created_time), "LLLL do, y");
 export default function Blog({ posts }: { posts: any }) {
 	return (
 		<Layout background='white'>
@@ -41,7 +40,9 @@ export default function Blog({ posts }: { posts: any }) {
 										className=' text-4xl md:text-6xl text-bgRed/50 font-bold mb-2 tracking-[-0.08em] leading-[0.7]'>
 										{post?.properties?.Name?.title[0]?.text?.content}
 									</h1>
-									<p className='text-xl text-gray-500'>written on {dateCreated(post)}</p>
+									<p className='text-xl text-gray-500'>
+										written on {format(parseISO(post?.created_time), "LLLL do, y")}
+									</p>
 								</div>
 							</Link>
 						</div>
