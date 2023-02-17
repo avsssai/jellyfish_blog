@@ -26,10 +26,11 @@ export default function Blog({ posts }: { posts: any }) {
 								<div className='p-2  rounded-lg mb-4'>
 									<div className='image relative aspect-square object-contain w-full max-h-[1200px] z-3 mb-4'>
 										<Image
-											src={post.properties.cover_image.url}
+											src={post.properties?.cover_image?.url}
 											alt={
-												post.properties.cover_image_alt.rich_text[0].text.content.length > 0
-													? post.properties.cover_image_alt.rich_text[0].text.content
+												post?.properties?.cover_image_alt?.rich_text[0]?.text?.content?.length >
+												0
+													? post?.properties?.cover_image_alt?.rich_text[0]?.text?.content
 													: "A wallpaper standin photo for the blog post cover."
 											}
 											fill
@@ -38,7 +39,7 @@ export default function Blog({ posts }: { posts: any }) {
 									<h1
 										key={post.id}
 										className=' text-4xl md:text-6xl text-bgRed/50 font-bold mb-2 tracking-[-0.08em] leading-[0.7]'>
-										{post.properties.Name.title[0].text.content}
+										{post?.properties?.Name?.title[0]?.text?.content}
 									</h1>
 									<p className='text-xl text-gray-500'>written on {dateCreated(post)}</p>
 								</div>

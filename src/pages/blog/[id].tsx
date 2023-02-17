@@ -24,10 +24,10 @@ export default function Post({ page, blocks }: { page: any; blocks: any }) {
 				<div className='image relative aspect-[4/3] object-cover rounded-lg w-full max-h-[720px] z-3 mb-4 '>
 					<Image
 						className='rounded-lg'
-						src={page.properties.cover_image.url}
+						src={page?.properties.cover_image.url}
 						alt={
-							page.properties.cover_image_alt.rich_text[0].text.content.length > 0
-								? page.properties.cover_image_alt.rich_text[0].text.content
+							page?.properties.cover_image_alt.rich_text[0]?.text?.content?.length > 0
+								? page?.properties?.cover_image_alt?.rich_text[0]?.text.content
 								: "A wallpaper standin photo for the blog post cover."
 						}
 						fill
