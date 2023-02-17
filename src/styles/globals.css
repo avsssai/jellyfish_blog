@@ -1,3 +1,155 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	:root {
+		--color-bgRed: 207 67 67;
+
+		/* ... */
+	}
+}
+
+@font-face {
+	font-family: "Messina Sans Book";
+	src: url("../../fonts/MessinaSans-Book.eot");
+	src: local("Messina Sans Book"), local("MessinaSans-Book"),
+		url("../../fonts/MessinaSans-Book.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-Book.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-Book.woff") format("woff"),
+		url("../../fonts/MessinaSans-Book.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-BlackItalic.eot");
+	src: local("Messina Sans Black Italic"), local("MessinaSans-BlackItalic"),
+		url("../../fonts/MessinaSans-BlackItalic.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-BlackItalic.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-BlackItalic.woff") format("woff"),
+		url("../../fonts/MessinaSans-BlackItalic.ttf") format("truetype");
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-SemiBold.eot");
+	src: local("Messina Sans SemiBold"), local("MessinaSans-SemiBold"),
+		url("../../fonts/MessinaSans-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-SemiBold.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-SemiBold.woff") format("woff"),
+		url("../../fonts/MessinaSans-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-Black.eot");
+	src: local("Messina Sans Black"), local("MessinaSans-Black"),
+		url("../../fonts/MessinaSans-Black.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-Black.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-Black.woff") format("woff"),
+		url("../../fonts/MessinaSans-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-Bold.eot");
+	src: local("Messina Sans Bold"), local("MessinaSans-Bold"),
+		url("../../fonts/MessinaSans-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-Bold.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-Bold.woff") format("woff"),
+		url("../../fonts/MessinaSans-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-SemiBoldItalic.eot");
+	src: local("Messina Sans SemiBold Italic"), local("MessinaSans-SemiBoldItalic"),
+		url("../../fonts/MessinaSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-SemiBoldItalic.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-SemiBoldItalic.woff") format("woff"),
+		url("../../fonts/MessinaSans-SemiBoldItalic.ttf") format("truetype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-Regular.eot");
+	src: local("Messina Sans Regular"), local("MessinaSans-Regular"),
+		url("../../fonts/MessinaSans-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-Regular.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-Regular.woff") format("woff"),
+		url("../../fonts/MessinaSans-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-LightItalic.eot");
+	src: local("Messina Sans Light Italic"), local("MessinaSans-LightItalic"),
+		url("../../fonts/MessinaSans-LightItalic.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-LightItalic.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-LightItalic.woff") format("woff"),
+		url("../../fonts/MessinaSans-LightItalic.ttf") format("truetype");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-BoldItalic.eot");
+	src: local("Messina Sans Bold Italic"), local("MessinaSans-BoldItalic"),
+		url("../../fonts/MessinaSans-BoldItalic.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-BoldItalic.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-BoldItalic.woff") format("woff"),
+		url("../../fonts/MessinaSans-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Messina Sans Book";
+	src: url("../../fonts/MessinaSans-BookItalic.eot");
+	src: local("Messina Sans Book Italic"), local("MessinaSans-BookItalic"),
+		url("../../fonts/MessinaSans-BookItalic.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-BookItalic.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-BookItalic.woff") format("woff"),
+		url("../../fonts/MessinaSans-BookItalic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-RegularItalic.eot");
+	src: local("Messina Sans Regular Italic"), local("MessinaSans-RegularItalic"),
+		url("../../fonts/MessinaSans-RegularItalic.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-RegularItalic.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-RegularItalic.woff") format("woff"),
+		url("../../fonts/MessinaSans-RegularItalic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Messina Sans";
+	src: url("../../fonts/MessinaSans-Light.eot");
+	src: local("Messina Sans Light"), local("MessinaSans-Light"),
+		url("../../fonts/MessinaSans-Light.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/MessinaSans-Light.woff2") format("woff2"),
+		url("../../fonts/MessinaSans-Light.woff") format("woff"),
+		url("../../fonts/MessinaSans-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}

@@ -16,6 +16,7 @@ module.exports = {
 				serif: ["var(--font-merriweather)", ...fontFamily.sans],
 				sans: "'Inter', sans-serif",
 				mono: "'IBM Plex Mono', monospace",
+				messina: "'Messina Sans Book', sans-serif",
 			},
 			backgroundColor: {
 				bgYellow: "#EBEAE0",
@@ -23,6 +24,10 @@ module.exports = {
 				redPastel: "#EF476F",
 				greenPastel: "#06D6A0",
 				bluePastel: "#118AB2",
+				bgBeige: "#EDDBC7",
+				bgRed: "#CF4343",
+				bgYello: "#EAD66C",
+				bgRedAccent: "#813333",
 			},
 			minWidth: {
 				mobileWidth: `min(100%, 300px)`,
@@ -36,6 +41,7 @@ module.exports = {
 				redPastel: "#EF476F",
 				greenPastel: "#06D6A0",
 				bluePastel: "#118AB2",
+				bgRedAccent: "rgb(var(--color-bgRedAccent) / 56)",
 			},
 			colors: {
 				bgYellow: "#EBEAE0",
@@ -43,8 +49,22 @@ module.exports = {
 				redPastel: "#EF476F",
 				greenPastel: "#06D6A0",
 				bluePastel: "#118AB2",
+				bgBeige: "#EDDBC7",
+				bgRed: "#CF4343",
+				bgRedAccent: "rgb(var(--color-bgRedAccent) / 56)",
+				bgYello: "EAD66C",
+			},
+			tracking: {
+				superTight: "-0.10em",
+			},
+			borderColor: {
+				bgRed: "#CF4343",
+			},
+			leading: {
+				superTight: "0.9",
 			},
 		},
 	},
 	plugins: [],
+	safelist: ["bg-bgBeige", "bg-bgRed", "bg-bgYello", "bg-bgRedAccent"],
 };

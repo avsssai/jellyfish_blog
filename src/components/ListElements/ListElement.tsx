@@ -6,7 +6,7 @@ interface IProps {
 
 export function ListItem({ richTextArr }: IProps) {
 	return (
-		<li className=''>
+		<li className='text-xl'>
 			{richTextArr.map((text) => (
 				<Text key={text.text.content} rich_text={text} />
 			))}
