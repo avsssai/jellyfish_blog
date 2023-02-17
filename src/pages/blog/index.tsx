@@ -41,7 +41,7 @@ export default function Blog({ posts }: { posts: any }) {
 										{post?.properties?.Name?.title[0]?.text?.content}
 									</h1>
 									<p className='text-xl text-gray-500'>
-										written on {format(parseISO(post?.created_time), "LLLL do, y")}
+										written on {format(parseISO(post.created_time), "LLLL do, y")}
 									</p>
 								</div>
 							</Link>

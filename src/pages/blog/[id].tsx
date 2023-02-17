@@ -36,7 +36,7 @@ export default function Post({ page, blocks }: { page: any; blocks: any }) {
 					{page?.properties?.Name?.title[0]?.text?.content}
 				</h1>
 				<div className='text-gray-500 font-bold text-xl mb-24 md:mb-48 '>
-					{format(parseISO(page?.created_time), "LLLL do, y")}
+					{format(parseISO(page.created_time), "LLLL do, y")}
 				</div>
 				<section>
 					{blocks?.map((block: any) => (
