@@ -13,9 +13,9 @@ const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Post({ page, blocks }: { page: any; blocks: any }) {
 	// console.log(format(parseISO(page?.created_time), "LLLL do, y"));
-	let date = format(parseISO(page?.created_time), "LLLL do, y")
-		? format(parseISO(page?.created_time), "LLLL do, y")
-		: "";
+	// let date = format(parseISO(page?.created_time), "LLLL do, y")
+	// 	? format(parseISO(page?.created_time), "LLLL do, y")
+	// 	: "";
 	return (
 		<Layout background='white'>
 			<div className='max-w-4xl flex flex-col mx-auto p-4 font-sans'>
@@ -41,7 +41,8 @@ export default function Post({ page, blocks }: { page: any; blocks: any }) {
 				</h1>
 				<div className='text-gray-500 font-bold text-xl mb-24 md:mb-48 '>
 					{/* {format(parseISO(page?.created_time), "LLLL do, y")} */}
-					{date}
+					{/* {format(page?.created_time, "LLLL do, y")} */}
+					{page?.created_time}
 				</div>
 				<section>
 					{blocks?.map((block: any) => (
