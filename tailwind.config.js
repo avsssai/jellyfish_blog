@@ -57,6 +57,9 @@ module.exports = {
 			tracking: {
 				superTight: "-0.10em",
 			},
+			borderColor: {
+				bgRed: "#CF4343",
+			},
 			leading: {
 				superTight: "0.9",
 			},

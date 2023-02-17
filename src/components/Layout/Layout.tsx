@@ -2,9 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Menu } from "react-feather";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+	children,
+	background = "bgBeige",
+}: {
+	children: React.ReactNode;
+	background?: string;
+}) {
 	return (
-		<main className='h-full min-h-screen bg-bgBeige w-full font-messina'>
+		<main className={`h-full min-h-screen bg-${background} w-full font-messina`}>
 			<div className='header flex  items-center mb-8 text-bgRed'>
 				<nav className='header-content flex justify-between items-center w-full p-4 lg:p-8'>
 					<Link href={"/"}>
